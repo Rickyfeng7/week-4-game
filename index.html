@@ -2,9 +2,8 @@
 <html>
 <head>
 	<title>CrystalsCollevtorGame</title>
-	<style type="text/css" src="assets/css/style.css" src="assets/javascript/javascript.js"></style> 
-	<script type="text/javascript"></script>
-
+		<style type="text/css" src="assets/css/style.css"></style>
+	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 	<div class = "container">
@@ -30,11 +29,9 @@
 				</p>
 			</div>
 		</div>
-
 		<div class ="row">
 			<div class = "col-sm-4" id = "goal">
-				<h5 id = start>?</h5>
-				<h5 id = startPoint>?</h5>
+				<h5 id = start></h5>
 			</div>
 
 			<div class = "col-sm-4" id = "Score">
@@ -44,20 +41,23 @@
 		</div>
 		<div class = "row">
 			<div class = "col-md-12">
-			  <button type="buttonOne" class="btn btn-default"><img src="assets/image/c1.jpg" width="70px"></button>
-			  <button type="buttonTwo" class="btn btn-default"><img src="assets/image/c2.jpg" width="70px"></button>
-			  <button type="buttonThree" class="btn btn-default"><img src="assets/image/c3.jpg" width="70px"></button>
-			  <button type="buttonFour" class="btn btn-default"><img src="assets/image/c4.jpg" width="70px"></button>
+			  <button class="btn btn-default"><img src="assets/image/c1.jpg" width="70px" id = "crystalOne"></button>
+			  <button class="btn btn-default"><img src="assets/image/c2.jpg" width="70px" id = "crystalTwo"></button>
+			  <button class="btn btn-default"><img src="assets/image/c3.jpg" width="70px" id = "crystalThree"></button>
+			  <button class="btn btn-default"><img src="assets/image/c4.jpg" width="70px" id = "crystalFour" ></button>
 			</div>
 		</div>
 		<div class= "row">
 			<div class ="col-md-6" id = "scoreInst">
-				<h3> Current Score<h3>
+				<h3> Current Score <h3>
 			</div>
-			<div class = "col-md-6" id = "scoreBox">
-				<h5> 0 </h5>
+			<div class = "col-md-6">
+				<h5 id = "scoreBox">  </h5>
 			</div>
 		</div>
 	</div>
+
+	<script type="text/javascript" src="assets/javascript/javascript.js"></script>
+
 </body>
 </html>
