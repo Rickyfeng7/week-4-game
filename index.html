@@ -2,19 +2,30 @@
 <html>
 <head>
 	<title>CrystalsCollevtorGame</title>
-		<style type="text/css" src="assets/css/style.css"></style>
-	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 	<div class = "container">
 		<div class = "row">
 			<div class = "col-md-12">
-				<h1 id = titleBox > <center> Crystal Cards ! </center> </h1>
+				<header id ="titleBox">
+					<center>
+						<h1>
+							Weather Control !
+						</h1>
+					</center>
+				</header>
 			</div>
 		</div>	
 		
 		<div class = "row">
-			<div class = "col-md-12" id = pragraphBox>
+			<div class = "col-md-12" id = "pragraphBox">
+				<center>
+				<h2 id="int">
+					Instructions
+				</h2>
 				<p> 
 					At the start of the game a random number will be posted 
 				</p>
@@ -27,32 +38,43 @@
 				<p>
 					Each time the game starts the values on the image will change and the specific amount you are trying to match will change.
 				</p>
+				</center>
 			</div>
 		</div>
 		<div class ="row">
-			<div class = "col-sm-4" id = "goal">
-				<h5 id = start></h5>
+			<div class = "col-sm-4">
+				<center>
+				<h2 id="goal">Goal<h2>
+				<h5 id ="start"></h5>
+				</center>
 			</div>
-
 			<div class = "col-sm-4" id = "Score">
-				<h5 id = "win">Win = 0</h5>
-				<h5 id = "loss">Loss = 0</h5>
+				<center>
+					<h5 id="winner">Win:<span id="win">0</span></h5>
+					<h5 id="loser">Loss:<span id="loss">0</span></h5>
+				</center>
 			</div>
 		</div>
 		<div class = "row">
 			<div class = "col-md-12">
-			  <button class="btn btn-default"><img src="assets/image/c1.jpg" width="70px" id = "crystalOne"></button>
-			  <button class="btn btn-default"><img src="assets/image/c2.jpg" width="70px" id = "crystalTwo"></button>
-			  <button class="btn btn-default"><img src="assets/image/c3.jpg" width="70px" id = "crystalThree"></button>
-			  <button class="btn btn-default"><img src="assets/image/c4.jpg" width="70px" id = "crystalFour" ></button>
+			<center>
+				  <button class="btn btn-default crystals"><img src="assets/image/rain.jpg" width="100px" id="crystalOne"></button>
+				  <button class="btn btn-default crystals"><img src="assets/image/snow.jpg" width="100px" id="crystalTwo"></button>
+				  <button class="btn btn-default crystals"><img src="assets/image/lighting.jpg" width="100px" id="crystalThree"></button>
+				  <button class="btn btn-default crystals"><img src="assets/image/sun.jpg" width="100px" id="crystalFour" ></button>
+			</center>
 			</div>
 		</div>
 		<div class= "row">
 			<div class ="col-md-6" id = "scoreInst">
-				<h3> Current Score <h3>
+				<center>
+					<h3 id="current"> Current Score <h3>
+				</center>
 			</div>
 			<div class = "col-md-6">
-				<h5 id = "scoreBox">  </h5>
+				<center>
+					<h5 id="scoreBox">  </h5>
+				</center>
 			</div>
 		</div>
 	</div>

@@ -1,73 +1,81 @@
 $(document).ready(function() {
-var win	= "win =" + 0;
-var loss = 0; 
-var randomNumber = "";
-var crystalOne;
-var crystalTwo = 0;
-var crystalThree = 0;
-var crystalFour = 0;
-var totalScore = 0;
+	var win	= 0;
+	var loss = 0; 
+	var randomNumber;
+	var crystalOne;
+	var crystalTwo = 0;
+	var crystalThree = 0;
+	var crystalFour = 0;
+	var totalScore = 0;
 
 
 	var randomGen = function(){
-	 randomNumber = [Math.floor(Math.random()*(102)) + 19];
-	console.log(randomNumber);
-};
-randomGen();
+		randomNumber = Math.floor(Math.random()*(102)) + 19;
+		console.log("randomNumber",randomNumber);
 
-var userGen	= function(){
-	button = [Math.floor(Math.random()*(12)) + 1];
-	return button;
-	console.log(button);
-};
+	};
+	randomGen();
 
-userGen();
+	var userGen	= function(){
+		var button = Math.floor(Math.random()*(12)) + 1;
+		return button;
+		console.log("button",button);
+	};
 
-function initializeStart(){
-
-	 randomNumber = randomGen();
-	 crystalOne = userGen();
-	 crystalTwo = userGen();
-	 crystalThree = userGen();
-	 crystalFour = userGen();
-	
+	function initializeStart(){
+	randomGen();
+	crystalOne = userGen();
+	crystalTwo = userGen();
+	crystalThree = userGen();
+	crystalFour = userGen();
+	$("#start").html(randomNumber);
+        totalScore = 0;
+        $("#scoreBox").html(totalScore);
 };
 
 	$("#start").html(randomNumber);
-initializeStart();
+	initializeStart();
 
 	$("#crystalOne").on("click", function() {
 		totalScore = parseInt(totalScore) + parseInt(crystalOne);
 		$("#scoreBox").html("Total: " + totalScore);
 		console.log(totalScore);
+		console.log(randomGen);
+		compare();
 	});
 	$("#crystalTwo").on("click", function() {
 		totalScore = parseInt(totalScore) + parseInt(crystalTwo);
 		$("#scoreBox").html("Total: " + totalScore);
 		console.log(totalScore);
+		compare();
 	});
 	$("#crystalThree").on("click", function() {
 		totalScore = parseInt(totalScore) + parseInt(crystalThree);
 		$("#scoreBox").html("Total: " + totalScore);
 		console.log(totalScore);
+		compare();
 	});
 	$("#crystalFour").on("click", function() {
 		totalScore = parseInt(totalScore) + parseInt(crystalFour);
 		$("#scoreBox").html("Total: " + totalScore);
 		console.log(totalScore);
+		compare();
 	});
 
-	if (totalScore === randomNumber){
-		win++;
-			initializeStart();
-			$("#win").html(win);
-			console.log(win);
-	};
-
-	if (totalScore > randomNumber){
-		loss++;
-			initializeStart();
-			$("#loss").html(loss);
-			console.log(loss);
+	function compare(){
+		console.log("inside",win);
+		console.log("text",loss);
+		if (totalScore === randomNumber){
+			win++;
+				initializeStart();
+				$("#win").text(win);
+				alert(win);
+		}
+		else if (totalScore > randomNumber){
+			loss++;
+				initializeStart();
+				$("#loss").text(loss);
+				alert(loss);
+		};
 	};
 });
